@@ -11,39 +11,37 @@ This project is a simple application that allows users to search for movie / ser
     - ✅ Movies
     - ✅ TV Series
     - ✅ Contact
-  - ⬜ Main Content
+  - ✅ Main Content
   - ⬜ Footer
     - ⬜ Recently Viewed Component
     - ✅ Copyright
-    - ⬜ Disclaimer
 
 - ⬜ Home
 
   - ⬜ Featured Movies / TV Show component
 
-- ⬜ Movies / TV Series
+- ✅ Movies / TV Series
 
   - ✅ Search Box
   - ✅ Search Results
-    - ⬜ Display 'Previously Viewed' flag
 
-- ⬜ Movie / TV Series Details
+- ✅ Movie / TV Series Details
 
-  - ⬜ Poster
-  - ⬜ Title
-  - ⬜ Release Year
-  - ⬜ Genre
-  - ⬜ Runtime
-  - ⬜ Age Rating
-  - ⬜ Synopsis
-  - ⬜ Cast
-  - ⬜ Ratings
+  - ✅ Poster
+  - ✅ Title
+  - ✅ Release Year
+  - ✅ Genre
+  - ✅ Runtime
+  - ✅ Age Rating
+  - ✅ Synopsis
+  - ✅ Cast
+  - ✅ Ratings
 
 - ⬜ Contact
-  - ⬜ Name
-  - ⬜ Email
-  - ⬜ Message
-  - ⬜ Submit (spoofed)
+  - ✅ Name
+  - ✅ Email
+  - ✅ Message
+  - ✅ Submit (spoofed)
   - ⬜ Form Validation
 
 ## Setup
