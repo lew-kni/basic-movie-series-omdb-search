@@ -4,7 +4,7 @@ This project is a simple application that allows users to search for movie / ser
 
 ## Requirements
 
-- ⬜ Layout
+- ✅ Layout
 
   - ✅ Header with navigation
     - ✅ Home
@@ -12,8 +12,8 @@ This project is a simple application that allows users to search for movie / ser
     - ✅ TV Series
     - ✅ Contact
   - ✅ Main Content
-  - ⬜ Footer
-    - ⬜ Recently Viewed Component
+  - ✅ Footer
+    - ✅ Recently Viewed Component
     - ✅ Copyright
 
 - ⬜ Home
@@ -37,12 +37,12 @@ This project is a simple application that allows users to search for movie / ser
   - ✅ Cast
   - ✅ Ratings
 
-- ⬜ Contact
+- ✅ Contact
   - ✅ Name
   - ✅ Email
   - ✅ Message
   - ✅ Submit (spoofed)
-  - ⬜ Form Validation
+  - ✅ Form Validation
 
 ## Setup
 

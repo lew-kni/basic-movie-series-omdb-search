@@ -26,10 +26,7 @@
 			<slot />
 		</main>
 
-		<!-- Footer -->
-		<footer class="bg-gray-800 text-white p-4 text-center">
-			&copy; 2025 My Site Footer
-		</footer>
+		<Footer />
 	</div>
 </template>
 

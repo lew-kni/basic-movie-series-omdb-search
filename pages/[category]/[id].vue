@@ -84,6 +84,8 @@
 </template>
 
 <script setup lang="ts">
+	import { useViewedTitlesStore } from '@/stores/viewedTitles';
+
 	definePageMeta({
 		middleware: 'validate-category',
 	});
@@ -96,8 +98,20 @@
 	const routeObj = useRoute();
 	const route = computed(() => routeObj);
 
+	// Initialize the store
+	const viewedTitlesStore = useViewedTitlesStore();
+
 	const res = await getById(route.value.params.id);
 	result.value = res.data || [];
+
+	// Add the current title to the viewed list
+	viewedTitlesStore.addViewedTitle({
+		imdbID: result.value.imdbID,
+		Type: route.value.params.category,
+		Year: result.value.Year,
+		Poster: result.value.Poster,
+		Title: result.value.Title,
+	});
 
 	const linkObject = computed(() => {
 		return {

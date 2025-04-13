@@ -43,6 +43,8 @@
 		},
 	});
 
+	console.log('item', props.item);
+
 	const linkObject = computed(() => {
 		return {
 			name: 'category-id',
