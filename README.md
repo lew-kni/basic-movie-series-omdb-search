@@ -2,18 +2,56 @@
 
 This project is a simple application that allows users to search for movie / series information using the OMDb API.
 
-## Features
+## Requirements
 
-1. TBC
+- [ ] Layout
+    - [ ] Header with navigation
+        - [ ] Home
+        - [ ] Movies
+        - [ ] TV Series
+        - [ ] Contact
+    - [ ] Main Content
+    - [ ] Footer
+        - [ ] Recently Viewed Component
+        - [ ] Copyright
+        - [ ] Disclaimer
+- [ ] Home
+    - [ ] Featured Movies / TV Show component
+- [ ] Movies / TV Series
+    - [ ] Search Box
+    - [ ] Search Results
+        - [ ] Display 'Previously Viewed' flag
+- [ ] Movie / TV Series Details
+    - [ ] Poster
+    - [ ] Title
+    - [ ] Release Year
+    - [ ] Genre
+    - [ ] Runtime
+    - [ ] Age Rating
+    - [ ] Synopsis
+    - [ ] Cast
+    - [ ] Ratings
+- [ ] Contact
+    - [ ] Name
+    - [ ] Email
+    - [ ] Message
+    - [ ] Submit (spoofed)
+    - [ ] Form Validation
 
-## Installation
+## Setup
 
-1. TBC
+Make sure to install dependencies:
 
-## Usage
+```bash
+# pnpm
+pnpm install
+```
 
-1. TBC
+## Development Server
 
-## License
+Start the development server on `http://localhost:3000`:
 
-This project is licensed under the [MIT License](LICENSE).
+```bash
+# pnpm
+pnpm dev
+```
