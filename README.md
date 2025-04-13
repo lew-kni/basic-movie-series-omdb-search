@@ -5,11 +5,11 @@ This project is a simple application that allows users to search for movie / ser
 ## Requirements
 
 - [ ] Layout
-  - [ ] Header with navigation
-    - [ ] Home
-    - [ ] Movies
-    - [ ] TV Series
-    - [ ] Contact
+  - [x] Header with navigation
+    - [x] Home
+    - [x] Movies
+    - [x] TV Series
+    - [x] Contact
   - [ ] Main Content
   - [ ] Footer
     - [ ] Recently Viewed Component

@@ -6,6 +6,10 @@
 </template>
 
 <script setup lang="ts">
+	definePageMeta({
+		middleware: 'validate-category',
+	});
+
 	const routeObj = useRoute();
 	const route = computed(() => routeObj);
 </script>
