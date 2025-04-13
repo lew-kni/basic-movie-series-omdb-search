@@ -33,6 +33,7 @@ export const useOmdbApi = () => {
 			params: {
 				apikey: API_KEY,
 				i: id,
+				plot: 'full',
 			},
 		});
 	};
