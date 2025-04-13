@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container text-white">
-		<h1>Category {{ route.params.category }} - {{ route.params.title }}</h1>
+		<h1>Category {{ route.params.category }} - {{ route.params.id }}</h1>
 		<p>This is a generic Vue 3 page template.</p>
 	</div>
 </template>
