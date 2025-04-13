@@ -1,30 +1,14 @@
 <template>
-    <div class="page-container">
-        <h1>Welcome to the Page</h1>
+    <div class="page-container text-white">
+        <h1>Home</h1>
         <p>This is a generic Vue 3 page template.</p>
     </div>
 </template>
 
-<script>
-export default {
-    name: "IndexPage",
-    setup() {
-        // Add your composition API logic here
-    },
-};
+<script setup lang="ts">
+const routeObj = useRoute()
+const route = computed(() => routeObj)
 </script>
 
 <style scoped>
-.page-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    color: #333;
-}
-
-p {
-    color: #666;
-}
 </style>
