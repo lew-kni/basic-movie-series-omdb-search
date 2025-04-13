@@ -2,8 +2,12 @@
 	<div
 		class="flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
 	>
-		<NuxtLink :to="linkObject" :key="item.imdbID">
-			<img class="rounded-t-lg" :src="item.Poster" alt="" />
+		<NuxtLink :to="linkObject" :key="item.imdbID" class="flex-1">
+			<img
+				class="rounded-t-lg object-cover w-full h-full"
+				:src="item.Poster"
+				alt=""
+			/>
 		</NuxtLink>
 		<div class="p-5">
 			<NuxtLink :to="linkObject" :key="item.imdbID">
@@ -41,7 +45,7 @@
 
 	const linkObject = computed(() => {
 		return {
-			name: 'category',
+			name: 'category-id',
 			params: {
 				category: props.category,
 				id: props.item.imdbID,
