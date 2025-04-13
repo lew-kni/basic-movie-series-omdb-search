@@ -12,6 +12,7 @@
 					@search="handleSearch"
 					hasSearch
 					:placeholder="`Search ${category?.friendly}...`"
+					:defaultValue="route.query.q"
 				/>
 			</div>
 		</Hero>

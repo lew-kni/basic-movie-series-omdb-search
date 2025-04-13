@@ -17,28 +17,32 @@
 	</div>
 </template>
 
-<script>
-	export default {
-		name: 'TextField',
-		props: {
-			hasSearch: {
-				type: Boolean,
-				default: false,
-			},
-			placeholder: {
-				type: String,
-				default: 'Search...',
-			},
+<script setup lang="ts">
+	const emit = defineEmits(['search']);
+	const props = defineProps({
+		hasSearch: {
+			type: Boolean,
+			default: false,
 		},
-		data() {
-			return {
-				value: '',
-			};
+		placeholder: {
+			type: String,
+			default: 'Search...',
 		},
-		methods: {
-			emitInputValue() {
-				this.$emit('search', this.value);
-			},
+		defaultValue: {
+			type: String,
+			default: '',
 		},
+	});
+
+	let value = ref('');
+
+	if (props.defaultValue) {
+		value.value = props.defaultValue;
+	}
+
+	const emitInputValue = () => {
+		if (value.value) {
+			emit('search', value.value);
+		}
 	};
 </script>
