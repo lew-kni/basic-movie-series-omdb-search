@@ -1,7 +1,9 @@
 <template>
 	<div class="flex flex-col min-h-screen bg-gray-800">
 		<!-- Header -->
-		<header class="text-white p-4 flex flex-row justify-between">
+		<header
+			class="text-white p-2 flex flex-row justify-between fixed top-0 left-0 right-0 z-10 from-gray-800 to-transparent bg-gradient-to-b"
+		>
 			<router-link :to="{ name: 'index' }">
 				<img
 					src="/public/assets/images/logo/sv_logo_pink_square@2x.png"
@@ -20,7 +22,7 @@
 		</header>
 
 		<!-- Main Content -->
-		<main class="flex-1 p-4">
+		<main class="flex-1">
 			<slot />
 		</main>
 

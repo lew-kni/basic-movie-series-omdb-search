@@ -1,13 +1,22 @@
 <template>
 	<div class="page-container text-white">
-		<h1>Category {{ category?.friendly }}</h1>
-		<Textfield
-			@search="handleSearch"
-			hasSearch
-			:placeholder="`Search ${category?.friendly}...`"
-		/>
+		<Hero
+			:title="`Welcome to the ${category?.friendly} database`"
+			:subtitle="`Search for your favorite ${category?.friendly}.`"
+			class="pt-12"
+		>
+			<div class="w-full">
+				<p class="text-center text-gray-500 mb-4"></p>
+				<Textfield
+					class="w-full max-w-md mx-auto"
+					@search="handleSearch"
+					hasSearch
+					:placeholder="`Search ${category?.friendly}...`"
+				/>
+			</div>
+		</Hero>
 
-		<div class="mt-4">
+		<div class="mt-4 px-4" v-if="searchTerm">
 			<div v-if="!results?.Search?.length" class="text-gray-500">
 				<p class="text-center">No results found for '{{ searchTerm }}'.</p>
 			</div>
@@ -31,6 +40,7 @@
 
 <script setup lang="ts">
 	import Card from '~/components/card/card.vue';
+	import { determineType, determineCategory } from '~/utils/helpers';
 
 	const { search } = useOmdbApi();
 	let searchTerm = ref('');
@@ -43,38 +53,24 @@
 	const routeObj = useRoute();
 	const route = computed(() => routeObj);
 
-	const category = computed(() => {
-		if (!route.value?.params.category) {
-			return;
-		}
+	const category = computed(() =>
+		determineCategory(route.value?.params.category)
+	);
 
-		const cat = route.value.params.category;
+	const type = computed(() => determineType(category.value?.url || ''));
 
-		return {
-			url: cat,
-			friendly: cat.replace(/-/g, ' '),
-		};
-	});
-
-	const type = computed(() => {
-		if (!category.value.url) {
-			return 'movie';
-		}
-
-		switch (category.value.url) {
-			case 'movies':
-				return 'movie';
-			case 'tv-series':
-				return 'series';
-			default:
-				return 'movie';
+	onMounted(async () => {
+		if (route.value.query.q) {
+			handleSearch(route.value.query.q);
 		}
 	});
 
 	const handleSearch = async (value: string) => {
-		searchTerm = value;
+		searchTerm.value = value;
 		const res = await search(value, type.value);
 		results.value = res.data || [];
+		const query = { ...routeObj.query, q: value };
+		await useRouter().replace({ query });
 	};
 </script>
 

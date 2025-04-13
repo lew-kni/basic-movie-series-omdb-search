@@ -14,7 +14,7 @@ This project is a simple application that allows users to search for movie / ser
   - ⬜ Main Content
   - ⬜ Footer
     - ⬜ Recently Viewed Component
-    - ⬜ Copyright
+    - ✅ Copyright
     - ⬜ Disclaimer
 
 - ⬜ Home
@@ -23,8 +23,8 @@ This project is a simple application that allows users to search for movie / ser
 
 - ⬜ Movies / TV Series
 
-  - ⬜ Search Box
-  - ⬜ Search Results
+  - ✅ Search Box
+  - ✅ Search Results
     - ⬜ Display 'Previously Viewed' flag
 
 - ⬜ Movie / TV Series Details

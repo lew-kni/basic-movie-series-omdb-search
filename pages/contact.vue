@@ -1,7 +1,10 @@
 <template>
 	<div class="page-container text-white">
-		<h1>Contact</h1>
-		<p>This is a generic Vue 3 page template.</p>
+		<Hero
+			title="Contact Us"
+			subtitle="Are we missing your favourite movie or TV series?<br/>Or simply have some feedback? We're happy to hear from you!"
+			class="pt-12"
+		></Hero>
 	</div>
 </template>
 
