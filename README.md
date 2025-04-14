@@ -2,6 +2,8 @@
 
 This project is a simple application that allows users to search for movie / series information using the OMDb API.
 
+A preview version of this build is available [here]https://lew-kni.github.io/basic-movie-series-omdb-search/).
+
 ## Requirements
 
 - ✅ Layout
@@ -45,6 +47,12 @@ This project is a simple application that allows users to search for movie / ser
   - ✅ Form Validation
 
 ## Setup
+
+Prerequisites
+
+```bash
+Node.js - 18.x
+```
 
 Make sure to install dependencies:
 
