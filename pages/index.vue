@@ -44,10 +44,11 @@
 					}"
 				>
 					<TitleCard
+						class="max-w-xl mx-auto"
 						:item="item"
 						:imageRight="isEven(index)"
-						hide-additional-info
-					/>
+						is-preview
+					></TitleCard>
 				</NuxtLink>
 			</div>
 		</div>

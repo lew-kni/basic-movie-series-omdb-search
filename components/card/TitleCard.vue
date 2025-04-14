@@ -22,11 +22,11 @@
 					<span class="text-pink-500">{{ item.Title }}</span>
 					- {{ item.Year }}
 				</h5>
-				<p class="mb-3 font-normal">
+				<p class="mb-3 font-normal" :class="isPreview ? 'line-clamp-6' : ''">
 					{{ item.Plot }}
 				</p>
 
-				<ul class="mt-5" v-if="!hideAdditionalInfo">
+				<ul class="mt-5" v-if="!isPreview">
 					<li class="flex flex-row">
 						<span class="float-left font-bold pe-2 text-pink-500">Type:</span>
 						<span class="flex-grow">{{ item.Type }}</span>
@@ -66,7 +66,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-3" v-if="!hideAdditionalInfo">
+		<div class="grid grid-cols-1 md:grid-cols-3" v-if="!isPreview">
 			<div
 				v-for="(rating, rIndex) in item.Ratings"
 				:key="rIndex"
@@ -92,7 +92,7 @@
 			type: Boolean,
 			default: false,
 		},
-		hideAdditionalInfo: {
+		isPreview: {
 			type: Boolean,
 			default: false,
 		},
