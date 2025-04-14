@@ -1,0 +1,1 @@
+import{T as s}from"./BvUii1m_.js";const T=s("viewedTitles",{state:()=>({viewedTitles:[]}),actions:{addViewedTitle(e){this.viewedTitles.some(i=>i.imdbID===e.imdbID)||this.viewedTitles.push(e)},getViewedTitles(){return this.viewedTitles},clearViewedTitles(){this.viewedTitles=[]}}},{persist:!0});export{T as u};

@@ -1,0 +1,1 @@
+const t=e=>{if(!e)return"movie";switch(e){case"movie":return"movie";case"series":return"series";default:return"movie"}},n=e=>{if(!e)return;const r=e;return{url:r,friendly:r.replace(/-/g," ")}},s=e=>e%2===0;export{t as a,n as d,s as i};
