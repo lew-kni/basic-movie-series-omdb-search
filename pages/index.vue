@@ -34,11 +34,21 @@
 		<div class="mt-16 px-4" v-if="!loading">
 			<h1 class="text-center text-2xl font-bold mb-4">Staff Picks</h1>
 			<div v-for="(item, index) in results" :key="item.imdbID" class="mb-4">
-				<TitleCard
-					:item="item"
-					:imageRight="isEven(index)"
-					hide-additional-info
-				/>
+				<NuxtLink
+					:to="{
+						name: 'category-id',
+						params: {
+							category: item.Type,
+							id: item.imdbID,
+						},
+					}"
+				>
+					<TitleCard
+						:item="item"
+						:imageRight="isEven(index)"
+						hide-additional-info
+					/>
+				</NuxtLink>
 			</div>
 		</div>
 	</div>
