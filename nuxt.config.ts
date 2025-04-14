@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	},
 	app: {
 		baseURL: '/basic-movie-series-omdb-search/', // 👈 VERY important for GitHub Pages
-	}
+	},
 	modules: ['@nuxtjs/tailwindcss'],
 	devtools: { enabled: true },
 	components: [
