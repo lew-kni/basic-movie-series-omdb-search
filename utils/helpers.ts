@@ -4,9 +4,9 @@ export const determineType = (categoryUrl: String) => {
 	}
 
 	switch (categoryUrl) {
-		case 'movies':
+		case 'movie':
 			return 'movie';
-		case 'tv-series':
+		case 'series':
 			return 'series';
 		default:
 			return 'movie';

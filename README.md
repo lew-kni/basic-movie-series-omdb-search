@@ -16,9 +16,9 @@ This project is a simple application that allows users to search for movie / ser
     - ✅ Recently Viewed Component
     - ✅ Copyright
 
-- ⬜ Home
+- ✅ Home
 
-  - ⬜ Featured Movies / TV Show component
+  - ✅ Featured Movies / TV Show component
 
 - ✅ Movies / TV Series
 

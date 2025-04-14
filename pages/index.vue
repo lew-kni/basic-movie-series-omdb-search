@@ -5,19 +5,17 @@
 			:subtitle="`Search for your favorite Movies & TV Series.`"
 			class="pt-12"
 		>
-			<div class="flex flex-row justify-center">
-				<NuxtLink
-					:to="{ name: 'category', params: { category: 'movies' } }"
-					class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-				>
-					Movies
-				</NuxtLink>
-				<NuxtLink
-					:to="{ name: 'category', params: { category: 'tv-series' } }"
-					class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-				>
-					TV Series
-				</NuxtLink>
+			<div class="flex flex-row justify-center gap-4">
+				<Btn
+					:to="{ name: 'category', params: { category: 'movie' } }"
+					text="Movies"
+					isBlue
+				/>
+				<Btn
+					:to="{ name: 'category', params: { category: 'series' } }"
+					text="TV Series"
+					isPink
+				/>
 			</div>
 		</Hero>
 		<div class="mt-16 px-4">

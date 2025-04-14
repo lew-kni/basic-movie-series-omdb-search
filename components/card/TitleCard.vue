@@ -64,6 +64,20 @@
 						<span class="flex-grow">{{ item.Writer }}</span>
 					</li>
 				</ul>
+				<div class="inline-block" v-if="isPreview">
+					<Btn
+						:to="{
+							name: 'category-id',
+							params: {
+								category: item.Type,
+								id: item.imdbID,
+							},
+						}"
+						text="View More Info"
+						class="mt-4"
+						isPink
+					/>
+				</div>
 			</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-3" v-if="!isPreview">
