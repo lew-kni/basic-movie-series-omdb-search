@@ -5,7 +5,7 @@
 			:subtitle="`Search for your favorite Movies & TV Series.`"
 			class="pt-12"
 		>
-			<div class="flex flex-row justify-center gap-5">
+			<div class="flex flex-row justify-center">
 				<NuxtLink
 					:to="{ name: 'category', params: { category: 'movies' } }"
 					class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -31,8 +31,15 @@
 				tempore nihil.
 			</p>
 		</div>
-		<div class="mt-16">
+		<div class="mt-16 px-4" v-if="!loading">
 			<h1 class="text-center text-2xl font-bold mb-4">Staff Picks</h1>
+			<div v-for="(item, index) in results" :key="item.imdbID" class="mb-4">
+				<TitleCard
+					:item="item"
+					:imageRight="isEven(index)"
+					hide-additional-info
+				/>
+			</div>
 		</div>
 	</div>
 </template>
@@ -40,6 +47,56 @@
 <script setup lang="ts">
 	const routeObj = useRoute();
 	const route = computed(() => routeObj);
+	const { getById } = useOmdbApi();
+	const loading = ref(true);
+	import { isEven } from '~/utils/helpers';
+
+	const featuredTitles = ref([
+		{
+			imdbID: 'tt7462410',
+			type: 'series',
+		},
+		{
+			imdbID: 'tt0080684',
+			type: 'movie',
+		},
+		{
+			imdbID: 'tt3526078',
+			type: 'series',
+		},
+		{
+			imdbID: 'tt0120630',
+			type: 'movie',
+		},
+		{
+			imdbID: 'tt0168366',
+			type: 'series',
+		},
+		{
+			imdbID: 'tt1262426',
+			type: 'movie',
+		},
+		{
+			imdbID: 'tt4154796',
+			type: 'movie',
+		},
+	]);
+
+	const results = ref([]);
+
+	featuredTitles.value.forEach((item) => {
+		const { imdbID, type } = item;
+		getById(imdbID)
+			.then((res) => {
+				results.value.push(res.data);
+			})
+			.catch((err) => {
+				console.error(err);
+			})
+			.finally(() => {
+				loading.value = false;
+			});
+	});
 </script>
 
 <style scoped></style>

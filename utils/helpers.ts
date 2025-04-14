@@ -24,3 +24,7 @@ export const determineCategory = (category: string) => {
 		friendly: cat.replace(/-/g, ' '),
 	};
 };
+
+export const isEven = (num: number) => {
+	return num % 2 === 0;
+};
